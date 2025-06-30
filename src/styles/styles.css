@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    background-color: bisque;
+}
+
+.wrapper > * {
+    flex: 1 100%;
+}
