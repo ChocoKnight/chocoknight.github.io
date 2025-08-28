@@ -1,8 +1,15 @@
 .wrapper {
-    display: flex;
-    background-color: bisque;
+  display: flex;
+  background-color: bisque;
 }
 
-.wrapper > * {
-    flex: 1 100%;
+.wrapper>* {
+  flex: 1 100%;
+}
+
+.page {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1rem;
+  background-color: #FFF8F0;
 }
