@@ -11,18 +11,28 @@ const headerTemplate = document.createElement('template');
 
 let templateReady = false; // tracks if CSS/template is loaded
 async function initHeaderTemplate() {
-  const resetStyles = await loadCss('./src/styles/reset.css');
-  const headerStyles = await loadCss('./src/styles/header.css');
-  const pageStyles = await loadCss('./src/styles/styles.css');
+  const resetStyles = await loadCss('src/styles/reset.css');
+  const headerStyles = await loadCss('src/styles/header.css');
+  const pageStyles = await loadCss('src/styles/styles.css');
+  const tokens = await loadCss('src/styles/tokens.css');
 
   headerTemplate.innerHTML = `
+    ${tokens}
     ${resetStyles}
     ${headerStyles}
     ${pageStyles}
     <header>
       <hr>
-        <h1><a href="index.html">Kevin Tan</a></h1>
-        <h1><a href="index.html">About Me</a></h1>
+        <div class="header">
+            <div>
+                <h1><a href="/">Kevin Tan</a></h1>
+            </div>
+            <div>
+                <h4><a href="/">About Me</a></h4>
+                <h4><a href="/cv/">Resume/CV</a></h4>
+                <h4><a href="/projects/">Projects</a></h4>
+            </div>
+        </div>
       <hr>
     </header>
   `;

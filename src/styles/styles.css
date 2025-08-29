@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  background-color: bisque;
+  background-color: var(--color-background);
 }
 
 .wrapper>* {
@@ -8,8 +8,85 @@
 }
 
 .page {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 1rem;
-  background-color: #FFF8F0;
+  background-color: var(--color-background);
+}
+
+.header {
+  margin-top: var(--size-spacing-medium);
+  margin-bottom: var(--size-spacing-medium);
+  display: flex;
+  align-items: center;         
+  font-family: var(--font-family-body);
+}
+
+.header > div{
+  display: flex;
+  gap: var(--size-spacing-xlarge);
+  align-items: center;          
+  margin-right: 4rem;
+}
+
+.home {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--size-spacing-xxlarge);
+  font-family: var(--font-family-body);
+}
+
+.info {
+  margin-top: 0.5rem;
+  border: #333 2px solid;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: var(--size-spacing-large);
+  padding-top: var(--size-spacing-medium);
+  flex: 1;
+  text-align: flex-start;
+}
+
+.profile-pic-container {
+  width: 100%;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contact-item {
+    display: flex;
+    gap: 0.5rem; /* space between label and link */
+}
+
+.label {
+    width: 80px; /* fixed width so all labels align */
+    font-weight: bold;
+}
+
+.about-me {
+  margin-top: 0.5rem;
+  flex: 3;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }

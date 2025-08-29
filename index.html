@@ -2,42 +2,69 @@
 
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="src/styles/styles.css">
-    <title>Kevin Tan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="src/components/header.js" type="module" defer></script>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-  <body class="page">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/styles.css">
 
-    <main>
+  <title>Kevin Tan</title>
 
-      <header-component></header-component>
+  <script src="/src/components/header.js" type="module" defer></script>
+</head>
 
-      <div>
+<body class="page">
+
+  <main>
+
+    <header-component></header-component>
+
+    <div class="home">
+      <div class="info">
+        <div class="profile-pic-container">
+          <img src="src\images\Kevin.jpg" alt="Kevin Tan" class="profile-pic">
+        </div>
         <p><b>Kevin Tan</b></p>
         <p>Computer Science Graduate</p>
         <p>California Polytechnic State University, San Luis Obispo</p>
-        <p>Email: 
+        <p class="contact-item">
+          <span class="label">Email:</span>
           <a href="mailto:k.tann.578@gmail.com">k.tann.578@gmail.com</a>
         </p>
-        <a href="https://github.com/ChocoKnight">GitHub</a>
-      </div>
-
-      <div>
-        <h1>Hello!</h1>
-        <p>
-          I'm a recent computer science graduate from Cal Poly San Luis Obispo.
+        <p class="contact-item">
+          <span class="label">GitHub:</span>
+          <a href="https://github.com/ChocoKnight">GitHub</a>
+        </p>
+        <p class="contact-item">
+          <span class="label">LinkedIn:</span>
+          <a href="https://www.linkedin.com/in/kevinwtan/">LinkedIn</a>
         </p>
       </div>
 
-    </main>
+      <div class="about-me">
+        <h1>Hello!</h1>
+        <p>
+          I'm a recent computer science graduate from Cal Poly San Luis Obispo. I graduated with a B.S. in Computer
+          Science with a concentration in Data Engineering.
+        </p>
+        <p>
+          My experience is tailored towards data engineering, data analytics, and machine learning. I have worked on projects
+          ranginging from building data and machine learning pipelines to predict the results of professional League of Legends
+          matches to document parsing and prompt engineering for LLM documentation chatbots.
+        </p>
+      </div>
+    </div>
+  </main>
 
-  </body>
+</body>
 
 </html>
