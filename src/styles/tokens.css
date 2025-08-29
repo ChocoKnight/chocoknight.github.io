@@ -1,10 +1,14 @@
 :root {
     --color-text: #333;
+    --color-links: var(--color-text);
+
+    --color-background: #FFFFFF;
 
     --size-spacing-small: 0.25rem;
     --size-spacing-medium: 0.5rem;
     --size-spacing-large: 1rem;
     --size-spacing-xlarge: 2rem;
+    --size-spacing-xxlarge: 2.5rem;
 
     --size-type-body: 1rem;
     --size-type-mlarge: 1.25rem;
@@ -22,8 +26,10 @@
     --font-weight-light: 200;
     --font-weight-bold: 700;
     
+    --font-family-body: 'Noto Sans', 'Inter', sans-serif;
 }
 
 body.dark-mode {
     --color-text: #fff;
+    --color-background: #333;
 }
