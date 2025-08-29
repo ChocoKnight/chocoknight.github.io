@@ -38,28 +38,36 @@ h6 {
     font-style: italic;
 }
 
-h1>a {
-    color: var(--color-link);
-}
-
+/* Default link styles */
 a {
-    color: var(--color-link);
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
+    /* color: var(--color-link); */
     text-decoration: underline;
-    /* color: var(--color-text-important); */
 }
 
-/* a:active {
+/* Hover and active states for all links */
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+/* Heading links: no underline by default */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: var(--color-text);
     text-decoration: none;
-} */
+}
+
+/* Heading links: underline on hover */
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}

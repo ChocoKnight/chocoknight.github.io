@@ -75,6 +75,16 @@
   flex: 3;
 }
 
+.pdf {
+  width: 75%;
+  height: 900px;
+  display: inline-block;
+}
+
+.center {
+  text-align: center;
+}
+
 .inter {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
