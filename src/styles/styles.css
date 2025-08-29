@@ -12,6 +12,7 @@
   margin-right: 15%;
   padding: 1rem;
   background-color: var(--color-background);
+  font-family: var(--font-family-body);
 }
 
 .header {
@@ -35,7 +36,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--size-spacing-xxlarge);
-  font-family: var(--font-family-body);
 }
 
 .info {
