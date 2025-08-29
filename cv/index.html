@@ -16,19 +16,29 @@
 
   <link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/src/styles/styles.css">
-
-  <title>Kevin Tan - CV</title>
+  <link rel="stylesheet" href="/src/styles/header.css">
 
   <script src="/src/components/header.js" type="module" defer></script>
+
+  <title>Kevin Tan - CV</title>
 </head>
 
 <body class="page">
 
   <main>
 
-    <h1>Welcome to My Website [Name of the website]</h1>
+    <header-component></header-component>
 
-    <p>This is my new website hosted on GitHub Pages!</p>
+    <p>
+      CV last updated August 28, 2025.
+      <a href={cvUrl}>
+        Open PDF in a new tab.
+      </a>
+    </p>
+
+    <div class="center">
+      <embed src="/src/resources/Kevin Tan - Resume 2025.pdf" type="application/pdf" class="pdf" title="Kevin's CV" />
+    </div>
 
   </main>
 

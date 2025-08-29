@@ -11,10 +11,10 @@ const headerTemplate = document.createElement('template');
 
 let templateReady = false; // tracks if CSS/template is loaded
 async function initHeaderTemplate() {
-  const resetStyles = await loadCss('src/styles/reset.css');
-  const headerStyles = await loadCss('src/styles/header.css');
-  const pageStyles = await loadCss('src/styles/styles.css');
-  const tokens = await loadCss('src/styles/tokens.css');
+  const resetStyles = await loadCss('/src/styles/reset.css');
+  const headerStyles = await loadCss('/src/styles/header.css');
+  const pageStyles = await loadCss('/src/styles/styles.css');
+  const tokens = await loadCss('/src/styles/tokens.css');
 
   headerTemplate.innerHTML = `
     ${tokens}
