@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Documentation Chatbot",
+        "startMonth": "June",
+        "startYear": "2025",
+        "endMonth": "September",
+        "endYear": "2025",
+        "description": "A chatbot that answers questions about a given documentation using retrieval-augmented generation (RAG) techniques.",
+        "reference": "detailed/index.html#InfiosChatbot"
+    },
+    {
+        "title": "League of Legends Match Predictor",
+        "startMonth": "January",
+        "startYear": "2025",
+        "endMonth": "June",
+        "endYear": "2025",
+        "description": "Designing and training a machine learning pipeline to learn and predict the outcome of professional League of Legends matches based on historical data.",
+        "reference": "detailed/index.html#OracleLens"
+    },
+    {
+        "title": "Analysis of Walkability throughout the United States",
+        "startMonth": "May",
+        "startYear": "2025",
+        "endMonth": "June",
+        "endYear": "2025",
+        "description": "An analysis of walkability throughout the United States using interactive visualizations and statistical methods to identify trends and correlations.",
+        "reference": "detailed/index.html#Walkability"
+    },
+    {
+        "title": "Mel Spectrogram Music Genre Classification",
+        "startMonth": "February",
+        "startYear": "2025",
+        "endMonth": "March",
+        "endYear": "2025",
+        "description": "Training a convolutional neural network (CNN) to classify music genres based on mel spectrograms of music samples.",
+        "reference": "detailed/index.html#MelSpectrogramGenreClassification"
+    }
+]

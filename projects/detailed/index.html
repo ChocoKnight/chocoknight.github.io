@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html lang=”en”>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/styles/tokens.css">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="stylesheet" href="/src/styles/header.css">
+
+    <script src="/src/components/header.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+
+    <title>Kevin Tan - Project Overview</title>
+</head>
+
+<body class="page">
+
+    <main>
+
+        <header-component></header-component>
+
+        <div id="content">Loading...</div>
+    </main>
+
+</body>
+
+<script>
+    async function loadMarkdown(file) {
+        try {
+            const res = await fetch(file);
+            if (!res.ok) throw new Error("File not found");
+            const text = await res.text();
+            document.getElementById('content').innerHTML = DOMPurify.sanitize(marked.parse(text));
+        } catch (err) {
+            document.getElementById('content').innerHTML = `<p style="color:red;">Project Description Error - ${err.message}</p>`;
+        }
+    }
+
+    function handleRoute() {
+        // Get the hash without the '#' symbol
+        const doc = location.hash.substring(1) || '404'; // default to 'doc1'
+        const file = `markdown/${doc}.md`;
+        loadMarkdown(file);
+    }
+
+    // Load the correct Markdown on page load
+    window.addEventListener('load', handleRoute);
+
+    // Update content when hash changes
+    window.addEventListener('hashchange', handleRoute);
+</script>
+
+</html>

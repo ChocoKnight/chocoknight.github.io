@@ -15,7 +15,6 @@ export class HeaderElement extends HTMLElement {
                   <h1><a href="/">Kevin Tan</a></h1>
               </div>
               <div>
-                  <h4><a href="/">About Me</a></h4>
                   <h4><a href="/cv/">Resume/CV</a></h4>
                   <h4><a href="/projects/">Projects</a></h4>
               </div>
@@ -24,6 +23,7 @@ export class HeaderElement extends HTMLElement {
       </header>
     `;
   }
+  // <h4><a href="/">About Me</a></h4>
 }
 
 customElements.define('header-component', HeaderElement);
