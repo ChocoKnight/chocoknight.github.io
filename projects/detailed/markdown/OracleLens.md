@@ -4,6 +4,8 @@ Janurary 2025 - June 2025
 
 GitHub Repo - [Oracle Lens](https://github.com/ChocoKnight/OracleLens)
 
+Relevant Skills: Python ([PyTorch](https://pytorch.org/), [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/)), SQL ([MySQL](https://www.mysql.com/)), TypeScript ([React](https://react.dev/), [Node.js](https://nodejs.org/en), [Vite](https://vite.dev/)), Machine Learning, Deep Learning
+
 ### Context
 
 The focus of my senior project was to develop a prediction algorithm for the professional esports scene of [League of Legends](https://www.leagueoflegends.com/en-us/). League of Legends is a multiplayer online battle arena video game where two teams of five players compete to take over the other's base. In the [official competitive scene](https://lolesports.com/en-US/leagues/first_stand,lck,msi,worlds), teams are separated by region into different leagues around the globe. The purpose of this project is to compile data across competitive play from 2014 to 2025 to help develop and train a machine learning algorithm to predict the likelihood of one team winning over another based on their recent performance, regardless of which region the teams hail from.

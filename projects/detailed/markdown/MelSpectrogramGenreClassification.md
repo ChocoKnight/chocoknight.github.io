@@ -1,5 +1,9 @@
 ## Music Genre Classification from Mel Spectrograms
 
+Feburary 2025 - March 2025
+
+Relevant Skills: Python ([PyTorch](https://pytorch.org/)), Machine Learning, Deep Learning
+
 ### Introduction 
 The goal of this project was to design a neural network capable of detecting the genre of different song samples. Classifying a song into a single genre can be difficult because several factors determine the genre of the song, including tempo, melody, instruments used, and many other features. There are also features of a song that determine genre that cannot be explicitly heard from the song, including geographical location or historical period. By using spectrograms, we aimed to consolidate many of the numeric audio features of a song into one aspect to be used in genre classification. For our approach to solving this problem, we turned 30-second samples of songs into mel spectrograms to be used as input into a convolutional neural network. These neural networks were then trained to classify these spectrograms into one of ten music genres.
 
@@ -74,3 +78,6 @@ Without Pitch Augmentation
 ### Future Work
 
 If we continue this project further, there are several things we could do to improve the outcome of this model. Something we wanted to implement but struggled with due to complexity and time was to implement a recurrent convolutional neural network. This is because a recurrent network would take advantage of the linear time series aspect of the spectrograms. By implementing a recurrent convolutional neural network, we predict that this would do better in classifying song genres as we would be taking full advantage of the way spectrograms are meant to be read. We tried to initially implement this idea using the vision transformer, however trying to fine-tune the pre-trained model did not go as well as we would have liked. Another model we would have liked to try would be to do convolutional neural network classifications on different kinds of spectrograms and then combine their output into a multi-level perceptron to do classification. This way we might be able to differentiate the small differences in the similar genres, like blues or rock, by not limiting ourselves to only using mel spectrograms. 
+
+### Citations
+GTZAN Genre Collection. 2002.	https://web.archive.org/web/20160816204700/http://marsyas.info/downloads/datasets.html
