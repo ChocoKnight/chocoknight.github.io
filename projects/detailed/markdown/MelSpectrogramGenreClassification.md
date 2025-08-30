@@ -10,9 +10,11 @@ The goal of this project was to design a neural network capable of detecting the
 ### Data
 The data we used included 1000 different audio files and their respective mel spectrograms. There was an equal distribution of audio files for the 10 different genres, and an almost equal distribution of spectrograms, as one of the jazz spectrograms was missing. 
 
-<img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png" 
-     alt="Jazz Mel Spectrogram" 
-     style="width:50%; height:auto;">
+<div style="text-align: center">
+     <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png" 
+          alt="Jazz Mel Spectrogram" 
+          style="width:50%; height:auto;">
+</div>
 
 <!-- ![Jazz Mel Spectrogram](/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png) -->
 
@@ -59,21 +61,33 @@ model  = nn.Sequential(
 
 With Pitch Augmentation
 
-<!-- <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png" 
-     alt="CNN With Pitch Augmentation HeatMap" 
-     style="width:50%; height:auto;">
+<div style="text-align: center; display: flex">
+     <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png" 
+          alt="CNN With Pitch Augmentation HeatMap" 
+          style="width:50%; height:auto;">
+     <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png" 
+          alt="CNN With Pitch Augmentation Results" 
+          style="width:50%; height:auto;">
+</div>
 
-<img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png" 
-     alt="CNN With Pitch Augmentation Results" 
-     style="width:50%; height:auto;"> -->
-
-![CNN With Pitch Augmentation HeatMap](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png)
-![CNN With Pitch Augmentation Results](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png)
+<!-- ![CNN With Pitch Augmentation HeatMap](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png)
+![CNN With Pitch Augmentation Results](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png) -->
 
 Without Pitch Augmentation
 
-![CNN Without Pitch Augmentation HeatMap](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_HeatMap.png)
-![CNN Without Pitch Augmentation Results](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_Results.png)
+<div style="text-align: center; display: flex">
+     <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_HeatMap.png" 
+          alt="CNN Without Pitch Augmentation HeatMap" 
+          style="width:50%; height:auto;">
+     <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_Results.png" 
+          alt="CNN Without Pitch Augmentation Results" 
+          style="width:50%; height:auto;">
+</div>
+
+From the results, we can see that the CNN worked better when using data samples without data augmentation. While some of the genres could consistently identified, like classical or metal, other genres, like country, disco, or rock, bring the are harder to distingush. We think this is happening because the mel spectrograms of these genres are similar to each other, which causes the CNN to mistake them for the wrong genre, brining the F1-score down.
+
+<!-- ![CNN Without Pitch Augmentation HeatMap](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_HeatMap.png)
+![CNN Without Pitch Augmentation Results](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Without_Pitch_Augmentation_Results.png) -->
 
 ### Future Work
 

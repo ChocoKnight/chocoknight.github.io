@@ -18,18 +18,22 @@ The first step in this project was to gather the relevant data related to the co
 
 After gathering the data and storing it in the database, the next phase of the project was to build a web application to display all the data being stored, so that users can search for specific matches, players, or champions. The website was made using the React and Node.js framework in TypeScript and initialized using the npm init command to create the mono repo. In the mono repo, there are two main directories, server, for everything related to the backend, and app, for everything related to the front end. The backend of the website was designed to be a RESTful API that connected to the MySQL database to serve information about the different aspects and details of competitive play. It connects to the database using the MySQL2 library and uses the express library to process and handle any requests going toward the server. Every time a call is made to the API, a SQL query is sent to the MySQL database to execute the purpose behind that call, with most calls being used to get data from the database, but the other RESTful features like post, put, and delete was also implemented but rarely used. The frontend framework was designed using the React Bootstrap library to handle the component design. Every time a page is loaded, it makes a call to the API on the backend to serve that data to be displayed.
 
-<img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_LCK_Summer_2024_Matches.png" 
-     alt="Oracle Lens LCK Summer 2024 Matches" 
-     style="width:75%; height:auto;">
-<img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_LCK_Summer_2024_Teams.png" 
-     alt="Oracle Lens LCK Summer 2024 Teams" 
-     style="width:75%; height:auto;">
+<div style="text-align: center">
+     <img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_LCK_Summer_2024_Matches.png" 
+          alt="Oracle Lens LCK Summer 2024 Matches" 
+          style="width:75%; height:auto;">
+     <img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_LCK_Summer_2024_Teams.png" 
+          alt="Oracle Lens LCK Summer 2024 Teams" 
+          style="width:75%; height:auto;">
+</div>
 
 Oracle Lens was able to display information related to specific tournaments. Here, we can see information about the League of Legends Champions Korea (LCK) 2024 Summer split, in this instance the match history and team overall performance. 
 
-<img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_T1_2024.png" 
-     alt="Oracle Lens T1 2024 Page" 
-     style="width:75%; height:auto;">
+<div style="text-align: center">
+     <img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_T1_2024.png" 
+          alt="Oracle Lens T1 2024 Page" 
+          style="width:75%; height:auto;">
+</div>
 
 In this image, we can see detailed statistics about T1'2 2024 team. This information can help provide information and insights into the teams, letting users know how they perform and what they prioritize. 
 
@@ -75,10 +79,11 @@ nn_model = torch.nn.Sequential(
 The two models were combined into a single pipeline so that the predicted team performances could be used as input to the match-winner prediction neural network. This model works by taking in the input of two team IDs, determined by the team IDs within the MySQL database, and a date. These team IDs are then used to call the backend RESTful API to get the 10 previously played matches of a team to use as input to the LSTM RNN. The date is an optional parameter that when used will gather the 10 previously played matches before that date. These matches were used as input to the LSTM RNN to generate new vectors to use as input to the neural network model to predict which of the two teams would win. 
 
 The pipeline of the model uses the FastAPI library to serve the pipeline through a server, similar to the backend RESTful API. The model can either be called directly through a call to the pipeline server or it can be called through the RESTful API on the backend side of the website, which also makes a call to the pipeline endpoint. 
-
-<img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_GenG_2024_T1_2024.png" 
-     alt="Oracle Lens Predicting the Chances of Gen.G 2024 Roster against the T1 2024 Roster" 
-     style="width:75%; height:auto;">
+<div style="text-align: center">
+     <img src="/projects/detailed/markdown/OracleLens/Oracle_Lens_GenG_2024_T1_2024.png" 
+          alt="Oracle Lens Predicting the Chances of Gen.G 2024 Roster against the T1 2024 Roster" 
+          style="width:75%; height:auto;">
+</div>
 
 In this image, we can see the model predicting the head to head against the 2024 Gen.G and 2024 T1 rosters. This prediction is accurate given the that T1 had not beaten Gen.G for mostly the entire 2024 season, beating them only once in the 2024 League of Legends Worlds Championship semi finals.
 
