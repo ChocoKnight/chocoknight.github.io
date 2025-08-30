@@ -6,7 +6,11 @@ The goal of this project was to design a neural network capable of detecting the
 ### Data
 The data we used included 1000 different audio files and their respective mel spectrograms. There was an equal distribution of audio files for the 10 different genres, and an almost equal distribution of spectrograms, as one of the jazz spectrograms was missing. 
 
-![Jazz Mel Spectrogram](/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png)
+<img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png" 
+     alt="Jazz Mel Spectrogram" 
+     style="width:50%; height:auto;">
+
+<!-- ![Jazz Mel Spectrogram](/projects/detailed/markdown/MelSpectrogramGenreClassification/Jazz_Mel_Spectrogram.png) -->
 
 This is a mel spectrogram for one of the jazz music samples.
 
@@ -18,11 +22,46 @@ Because of the small dataset, we used data augmentation to increase the total nu
 
 Our solution was to train a CNN that took a one-channel spectrogram as input and passed it to three rounds of convolutions with kernel size 3x3 and stride 1. The first max pooling was performed with kernel 2x2 and stride 2 while the next two were 4x4 and stride 4. Then the data was flattened and passed to a fully connected layer with a hidden layer of size 2056 and 10 outputs. ReLU was performed after each convolutional layer and the hidden layer. Torch’s Adam optimizer was used with a learning rate of 3e-4, weight decay of 3e-5 with cross-entropy loss, and run for 15 epochs. This model was trained with full augmentation (pitch, noise, reordering) and augmentation without a pitch on a 70% to 30% test split.
 
-![CNN Architecture](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_Architecture.png)
+```
+from torch import nn
+
+model  = nn.Sequential(
+        nn.Conv2d(1, 32, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.Conv2d(32, 32, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.MaxPool2d(2, stride=2),
+
+        nn.Conv2d(32, 64, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.Conv2d(64, 64, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.MaxPool2d(4, stride=4),
+
+        nn.Conv2d(64, 128, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.Conv2d(128, 128, 3,  stride=1, padding=1),
+        nn.ReLU(),
+        nn.MaxPool2d(4, stride=4),
+
+        nn.Flatten(),
+        nn.Linear(5120 ,2056),
+        nn.ReLU(),
+        nn.Linear(2056 ,10),
+    )
+```
 
 ### Results
 
 With Pitch Augmentation
+
+<!-- <img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png" 
+     alt="CNN With Pitch Augmentation HeatMap" 
+     style="width:50%; height:auto;">
+
+<img src="/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png" 
+     alt="CNN With Pitch Augmentation Results" 
+     style="width:50%; height:auto;"> -->
 
 ![CNN With Pitch Augmentation HeatMap](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_HeatMap.png)
 ![CNN With Pitch Augmentation Results](/projects/detailed/markdown/MelSpectrogramGenreClassification/CNN_With_Pitch_Augmentation_Results.png)
