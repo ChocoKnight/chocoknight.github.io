@@ -5,18 +5,20 @@ export class HeaderElement extends HTMLElement {
 
     this.shadowRootRef.innerHTML = `
       <link rel="stylesheet" href="/src/styles/reset.css">
-      <link rel="stylesheet" href="/src/styles/header.css">
-      <link rel="stylesheet" href="/src/styles/styles.css">
+      <link rel="stylesheet" href="/src/styles/text.css">
       <link rel="stylesheet" href="/src/styles/tokens.css">
+      <link rel="stylesheet" href="/src/styles/header.css">
       <header>
         <hr>
           <div class="header">
-              <div>
-                  <h1><a href="/">Kevin Tan</a></h1>
+              <div class="nav-item">
+                  <h1><a href="/">KEVIN TAN</a></h1>
               </div>
-              <div>
-                  <h4><a href="/cv/">Resume/CV</a></h4>
-                  <h4><a href="/projects/">Projects</a></h4>
+              <div class="nav-item">
+                  <h1><a href="/cv/">RESUME/CV</a></h4>
+              </div>
+              <div class="nav-item">
+                <h1><a href="/projects/">PROJECTS</a></h4>
               </div>
           </div>
         <hr>

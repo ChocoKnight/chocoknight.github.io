@@ -1,0 +1,57 @@
+
+h1 {
+    font-size: var(--size-type-xxlarge);
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: var(--size-type-xlarge);
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    font-size: var(--size-type-large);
+    font-weight: var(--font-weight-bold);
+}
+
+h4 {
+    font-size: var(--size-type-mlarge);
+    font-weight: var(--font-weight-bold);
+}
+
+h5 {
+    font-size: var(--size-type-body);
+    font-weight: var(--font-weight-bold);
+}
+
+h6 {
+    font-size: var(--size-type-body);
+    font-weight: var(--font-weight-normal);
+    font-style: italic;
+}
+
+/* Default link styles */
+a {
+    text-decoration: underline;
+}
+
+/* Heading links: no underline by default */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+/* Heading links: underline on hover */
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: var(--color-text);
+}

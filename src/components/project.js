@@ -11,7 +11,7 @@ export class ProjectElement extends HTMLElement {
     render(project) {
         this.shadowRootRef.innerHTML = `
             <link rel="stylesheet" href="/src/styles/reset.css">
-            <link rel="stylesheet" href="/src/styles/header.css">
+            <link rel="stylesheet" href="/src/styles/text.css">
             <link rel="stylesheet" href="/src/styles/styles.css">
             <link rel="stylesheet" href="/src/styles/tokens.css">
             <li>

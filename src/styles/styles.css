@@ -16,21 +16,6 @@
   text-align: justify;
 }
 
-.header {
-  margin-top: var(--size-spacing-medium);
-  margin-bottom: var(--size-spacing-medium);
-  display: flex;
-  align-items: center;
-  font-family: var(--font-family-body);
-}
-
-.header>div {
-  display: flex;
-  gap: var(--size-spacing-xlarge);
-  align-items: center;
-  margin-right: 4rem;
-}
-
 .home {
   margin-top: 0.5rem;
   display: flex;
@@ -100,6 +85,15 @@
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+
+.google-sans {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
 }
 
 li {

@@ -1,64 +1,52 @@
-
-h1 {
-    font-size: var(--size-type-xxlarge);
-    font-weight: var(--font-weight-bold);
+.header {
+  /* margin-top: var(--size-spacing-medium);
+  margin-bottom: var(--size-spacing-medium); */
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-body);
 }
 
-h2 {
-    font-size: var(--size-type-xlarge);
-    font-weight: var(--font-weight-bold);
+.header>div {
+  display: flex;
+  gap: 0;
+  align-items: center;
 }
 
-h3 {
-    font-size: var(--size-type-large);
-    font-weight: var(--font-weight-bold);
+.nav-item {
+  position: relative;
+  display: inline-block;
+  padding: var(--size-spacing-small) var(--size-spacing-large);
+  cursor: pointer;
+  margin-left: -1px; /* This pulls the items together by exactly 1px */
+  z-index: 1;
 }
 
-h4 {
-    font-size: var(--size-type-mlarge);
-    font-weight: var(--font-weight-bold);
+/* Common Styles for both lines */
+.nav-item::before,
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 1px;            /* The thickness of the vertical line */
+  background-color: var(--color-text); /* Your gold accent */
+  height: 0;             /* Start at zero height */
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-h5 {
-    font-size: var(--size-type-body);
-    font-weight: var(--font-weight-bold);
+/* Left Line: Anchor to bottom, grow up */
+.nav-item::before {
+  left: 0;
+  bottom: 0;
 }
 
-h6 {
-    font-size: var(--size-type-body);
-    font-weight: var(--font-weight-normal);
-    font-style: italic;
+/* Right Line: Anchor to top, grow down */
+.nav-item::after {
+  right: 0;
+  top: 0;
 }
 
-/* Default link styles */
-a {
-    text-decoration: underline;
+/* Hover State: Grow to full height */
+.nav-item:hover::before,
+.nav-item:hover::after {
+  height: 100%;
 }
 
-/* Hover and active states for all links */
-a:hover,
-a:active {
-    text-decoration: underline;
-}
-
-/* Heading links: no underline by default */
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-/* Heading links: underline on hover */
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
-    color: var(--color-text);
-    text-decoration: underline;
-}
