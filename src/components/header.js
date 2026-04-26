@@ -23,7 +23,6 @@ export class HeaderElement extends HTMLElement {
       </header>
     `;
   }
-  // <h4><a href="/">About Me</a></h4>
 }
 
 customElements.define('header-component', HeaderElement);
