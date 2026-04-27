@@ -1,6 +1,4 @@
 .header {
-  /* margin-top: var(--size-spacing-medium);
-  margin-bottom: var(--size-spacing-medium); */
   display: flex;
   align-items: center;
   font-family: var(--font-family-body);
@@ -14,11 +12,22 @@
 
 .nav-item {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: var(--size-spacing-small) var(--size-spacing-large);
   cursor: pointer;
-  margin-left: -1px; /* This pulls the items together by exactly 1px */
+  margin-left: -1px; 
   z-index: 1;
+  gap: var(--size-spacing-medium) !important;
+}
+
+.nav-item svg {
+  height: var(--size-type-xlarge); 
+  width: var(--size-type-xlarge);
+
+  flex-shrink: 0;
+  
+  stroke-width: 2px; 
 }
 
 /* Common Styles for both lines */
