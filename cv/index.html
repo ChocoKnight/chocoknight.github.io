@@ -14,10 +14,16 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/src/styles/styles.css">
-  <link rel="stylesheet" href="/src/styles/header.css">
+  <link rel="stylesheet" href="/src/styles/text.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
 
+  <script src="/src/utils/animation.js" defer></script>
   <script src="/src/components/header.js" type="module" defer></script>
 
   <title>Kevin Tan - CV</title>
@@ -29,12 +35,14 @@
 
     <header-component></header-component>
 
-    <p>
-      CV last updated August 28, 2025.
-    </p>
+    <div class="reveal-wrapper">
+      <p class="reveal">
+        CV last updated May 2, 2026.
+      </p>
+    </div>
 
     <div class="center">
-      <embed src="/src/resources/Kevin Tan - Resume 2025.pdf" type="application/pdf" class="pdf" title="Kevin's CV" />
+      <embed src="/src/resources/Kevin Tan - Resume.pdf" type="application/pdf" class="pdf" title="Kevin's CV" />
     </div>
 
   </main>

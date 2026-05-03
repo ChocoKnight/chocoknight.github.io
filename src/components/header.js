@@ -26,6 +26,7 @@ export class HeaderElement extends HTMLElement {
       <link rel="stylesheet" href="/src/styles/tokens.css">
       <link rel="stylesheet" href="/src/styles/header.css">
       <link rel="stylesheet" href="/src/styles/animations.css">
+
       <header class="reveal-left">
         <hr>
         <div class="header">
