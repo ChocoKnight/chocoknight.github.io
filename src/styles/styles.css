@@ -16,19 +16,9 @@
   text-align: justify;
 }
 
-.header {
-  margin-top: var(--size-spacing-medium);
-  margin-bottom: var(--size-spacing-medium);
-  display: flex;
-  align-items: center;
-  font-family: var(--font-family-body);
-}
-
-.header>div {
-  display: flex;
-  gap: var(--size-spacing-xlarge);
-  align-items: center;
-  margin-right: 4rem;
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevents the 'ghost' scrollbar during animation */
 }
 
 .home {
@@ -39,15 +29,29 @@
   gap: var(--size-spacing-xxlarge);
 }
 
+.home > .reveal-wrapper {
+  flex: 1; /* This takes the 1 part of the ratio */
+  display: flex; /* Ensures the child .info can still fill this space */
+  min-width: 300px;
+}
+
 .info {
-  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the children (Pic and Content) */
+  padding: var(--size-spacing-large);
   border: #333 2px solid;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: var(--size-spacing-large);
-  padding-top: var(--size-spacing-medium);
-  flex: 1;
-  text-align: flex-start;
+}
+.info-content {
+  /* This prevents the text from stretching to the full width of the box */
+  max-width: fit-content; 
+  
+  /* Centers the block itself if the container is wider than the text */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Ensures the actual text inside is left-aligned */
+  text-align: left; 
 }
 
 .profile-pic-container {
@@ -63,7 +67,8 @@
 
 .contact-item {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  justify-content: flex-start; /* Keeps labels and links pushed to the left */
 }
 
 .label {
@@ -73,7 +78,7 @@
 
 .about-me {
   margin-top: 0.5rem;
-  flex: 3;
+  flex: 2.5;
 }
 
 .pdf {
@@ -102,6 +107,15 @@
     "wdth" 100;
 }
 
+.google-sans {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
 li {
   list-style: none;
   margin-bottom: var(--size-spacing-medium);
@@ -110,4 +124,21 @@ li {
 ul {
   margin-top: var(--size-spacing-medium);
   padding-left: var(--size-spacing-xlarge);
+}
+
+svg {
+  width: 1.2em; 
+  height: auto;
+  display: inline-block;
+}
+
+.svg-fill {
+  fill: currentColor;
+}
+
+.svg-stroke {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }

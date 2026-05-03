@@ -1,6 +1,5 @@
 :root {
     --color-text: #333;
-    /* --color-links: var(--color-text); */
 
     --color-background: #FFFFFF;
 
@@ -16,9 +15,6 @@
     --size-type-xlarge: 2rem;
     --size-type-xxlarge: 2.5rem;
 
-    --font-family-body: Inter, sans-serif;
-    --font-family-display: Play, serif;
-
     --font-line-height-body: 1.5;
     --font-line-height-display: 1.125;
 
@@ -26,7 +22,9 @@
     --font-weight-light: 200;
     --font-weight-bold: 700;
     
-    --font-family-body: 'Noto Sans', 'Inter', sans-serif;
+    --font-family-body: 'Google Sans', 'Noto Sans', 'Inter', sans-serif;
+    --font-family-display: 'Google Sans', 'Noto Sans', 'Inter', sans-serif;
+    
 }
 
 body.dark-mode {
