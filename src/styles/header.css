@@ -4,6 +4,15 @@
   font-family: var(--font-family-body);
 }
 
+header-component {
+  display: block;
+  overflow: hidden; /* This "clips" the header so it doesn't cause a scrollbar */
+}
+
+header.reveal-left:not(.is-visible) {
+  visibility: hidden; /* Prevents the 'snap' from being seen */
+}
+
 .header>div {
   display: flex;
   gap: 0;

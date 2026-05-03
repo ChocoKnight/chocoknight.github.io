@@ -16,6 +16,11 @@
   text-align: justify;
 }
 
+body {
+  margin: 0;
+  overflow-x: hidden; /* Prevents the 'ghost' scrollbar during animation */
+}
+
 .home {
   margin-top: 0.5rem;
   display: flex;
@@ -24,15 +29,30 @@
   gap: var(--size-spacing-xxlarge);
 }
 
+.home > .reveal-wrapper {
+  flex: 1; /* This takes the 1 part of the ratio */
+  display: flex; /* Ensures the child .info can still fill this space */
+  min-width: 300px;
+}
+
 .info {
-  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the children (Pic and Content) */
+  padding: var(--size-spacing-large);
   border: #333 2px solid;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: var(--size-spacing-large);
-  padding-top: var(--size-spacing-medium);
-  flex: 1;
-  text-align: flex-start;
+}
+
+.info-content {
+  /* This prevents the text from stretching to the full width of the box */
+  max-width: fit-content; 
+  
+  /* Centers the block itself if the container is wider than the text */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Ensures the actual text inside is left-aligned */
+  text-align: left; 
 }
 
 .profile-pic-container {
@@ -48,7 +68,8 @@
 
 .contact-item {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  justify-content: flex-start; /* Keeps labels and links pushed to the left */
 }
 
 .label {
@@ -58,7 +79,7 @@
 
 .about-me {
   margin-top: 0.5rem;
-  flex: 3;
+  flex: 2.5;
 }
 
 .pdf {
@@ -104,19 +125,6 @@ li {
 ul {
   margin-top: var(--size-spacing-medium);
   padding-left: var(--size-spacing-xlarge);
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 i[data-lucide], 

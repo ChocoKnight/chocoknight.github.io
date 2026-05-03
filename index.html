@@ -20,8 +20,10 @@
 
   <link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/src/styles/styles.css">
-  <link rel="stylesheet" href="/src/styles/header.css">
+  <link rel="stylesheet" href="/src/styles/text.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
 
+  <script src="/src/utils/animation.js" defer></script>
   <script src="/src/components/header.js" type="module" defer></script>
 
   <title>Kevin Tan</title>
@@ -34,28 +36,32 @@
     <header-component></header-component>
 
     <div class="home">
-      <div class="info">
-        <div class="profile-pic-container">
-          <img src="src\resources\Kevin.jpg" alt="Kevin Tan" class="profile-pic">
+      <div class="reveal-wrapper">
+        <div class="info reveal-left">
+          <div class="profile-pic-container">
+            <img src="src\resources\Kevin.jpg" alt="Kevin Tan" class="profile-pic">
+          </div>
+          <div class="info-content">
+            <p><b>Kevin Tan</b></p>
+            <p>Computer Science Graduate</p>
+            <p>California Polytechnic State University, San Luis Obispo</p>
+            <p class="contact-item">
+              <span class="label">Email:</span>
+              <a href="mailto:k.tann.578@gmail.com">k.tann.578@gmail.com</a>
+            </p>
+            <p class="contact-item">
+              <span class="label">GitHub:</span>
+              <a href="https://github.com/ChocoKnight">GitHub</a>
+            </p>
+            <p class="contact-item">
+                <span class="label">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/kevinwtan/">LinkedIn</a>
+            </p>
+          </div>
         </div>
-        <p><b>Kevin Tan</b></p>
-        <p>Computer Science Graduate</p>
-        <p>California Polytechnic State University, San Luis Obispo</p>
-        <p class="contact-item">
-          <span class="label">Email:</span>
-          <a href="mailto:k.tann.578@gmail.com">k.tann.578@gmail.com</a>
-        </p>
-        <p class="contact-item">
-          <span class="label">GitHub:</span>
-          <a href="https://github.com/ChocoKnight">GitHub</a>
-        </p>
-        <p class="contact-item">
-          <span class="label">LinkedIn:</span>
-          <a href="https://www.linkedin.com/in/kevinwtan/">LinkedIn</a>
-        </p>
       </div>
 
-      <div class="about-me">
+      <div class="about-me reveal">
         <h1>Hello!</h1>
         <p>
           I'm a recent computer science graduate from Cal Poly San Luis Obispo. I graduated with a B.S. in Computer

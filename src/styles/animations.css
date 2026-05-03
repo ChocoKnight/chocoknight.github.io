@@ -1,0 +1,39 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-100vw); 
+  filter: blur(10px);
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.5s ease;
+  will-change: transform, opacity;
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.reveal-wrapper {
+  overflow: visible; /* Or hidden if you want a 'clipped' look */
+  width: 100%;
+}
+
+.is-visible .reveal-left {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
