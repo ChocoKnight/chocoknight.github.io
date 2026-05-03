@@ -42,7 +42,6 @@ body {
   padding: var(--size-spacing-large);
   border: #333 2px solid;
 }
-
 .info-content {
   /* This prevents the text from stretching to the full width of the box */
   max-width: fit-content; 
@@ -127,21 +126,19 @@ ul {
   padding-left: var(--size-spacing-xlarge);
 }
 
-i[data-lucide], 
-svg.lucide {
+svg {
+  width: 1.2em; 
+  height: auto;
   display: inline-block;
-  width: 1.2rem;
-  height: 1.2rem;
-  stroke-width: 2;
-  stroke: currentColor; /* This makes the icon match the text color */
 }
 
-svg.lucide {
-  width: 18px !important;
-  height: 18px !important;
-  display: inline-block;
-  flex-shrink: 0; /* Prevents the icon from squishing in a flexbox */
-  stroke-width: 2px;
-  /* Use currentColor so it automatically matches your text color */
-  stroke: currentColor; 
+.svg-fill {
+  fill: currentColor;
+}
+
+.svg-stroke {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
